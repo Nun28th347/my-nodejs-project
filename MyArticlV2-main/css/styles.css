@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header
+{
+    background-color: rgb(184, 0, 0);
+    /* background: linear-gradient(to bottom, #5d3bd5, #ffffff); */
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    transition: 0.5 ease;
+    position: relative;
+
+    > .brand
+    {
+        height: 50px;
+        width: 50px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    > .navigation
+    {
+        position: relative;
+
+
+        > .navigation-item
+        {
+            > a
+            {
+                position: relative;
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 500;
+                text-decoration: none;
+                margin-left: 30px;
+                transition: 0.3 ease;
+                
+            }
+            
+            > a:before
+            {
+                content: " ";
+                position: absolute;
+                background: #dad9d9;
+                width: 0;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                transition: 0.3s ease;
+                
+            }
+
+            > a:hover:before
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+section.home
+{
+    
+    padding: 100px 200px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(58, 129, 201);
+
+    > img
+    {
+        z-index: 000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    > img.img-slide
+    {
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+    }
+
+    > img.img-slide.active
+    {
+        clip-path: circle(150% at 0 50%);
+        transition: 2s ease;
+        transition-property: clip-path;
+    }
+
+    > .content
+    {
+        z-index: 999;
+        color: #ffffff;
+        width: 70%;
+        margin-top: 50px;
+        display: none;
+
+        > h1
+        {
+            font-size: 4em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 75px;
+            margin-bottom: 40px;
+            
+            > span
+            {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+        }
+
+        > p
+        {
+            margin-bottom: 65px;
+            
+        }
+
+        > a
+        {
+            background: #ffffff;
+            padding: 10px 25px;
+            color: rgb(58, 100, 192);
+            font-size: 1.1em;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        >a:hover
+        {
+            background: #f5f1f1;
+            transition: 0.3 ease;
+            
+        }
+    }
+
+    > .content.active
+    {
+        display: block;
+    }
+
+    > .media-icons
+    {
+        z-index: 888;
+        position: absolute;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s ease;
+
+        > a
+        {
+            color: #fff;
+            font-size: 1.4em;
+            transition: 0.3 ease;
+        }
+        
+        > a:not(:last-child)
+        {
+            margin-bottom: 20px;
+        }
+
+        > a:hover
+        {
+            transform: scale(1.2);
+        }
+    }
+
+
+}
+
+p{
+    font-size: 18px;
+}
+.headfirst {
+    /* ตั้งค่าสไตล์สำหรับ h1 ที่มีคลาส headfirst ที่นี่ */
+    /* เช่น */
+    font-size: 2em;
+    color: #333;
+    text-transform: uppercase;
+    /* เพิ่มสไตล์อื่น ๆ ตามต้องการ */
+}
+
+.headfirst a {
+    /* สไตล์สำหรับลิงก์ภายใน h1 ที่มีคลาส headfirst */
+    /* เช่น */
+    text-decoration: none;
+    color: #ffffff;
+    transition: text-decoration 0.9s ease; 
+}
+
+.headfirst a:hover {
+    /* สไตล์เมื่อลิงก์ถูกโฮเวอร์ */
+    /* เช่น */
+    text-decoration: underline;
+    
+    color: #e4e4e4;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+
+.col
+{
+    flex-basis: 100%;
+    margin-top: 40px;
+    color: rgb(0, 0, 0);
+}
+
+button
+{
+    width: 100px;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 5px 0;
+    background: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 30px;
+}
+
+button:hover
+{
+    background: #f5f1f1;
+    cursor: pointer;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    width: 400px;
+    min-height: 450px; /* Changed from height to min-height */
+    display: inline-flex;
+    flex-direction: column; /* Ensures content is aligned vertically */
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Centers content horizontally */
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    text-decoration: none;
+}
+
+
+
+
+.card h5 {
+    font-size: 22px;
+    text-shadow: 0 0 5px #bfbaba;
+    margin-bottom: 15px; /* Adds space between header and paragraph */
+    color: #000000;
+}
+
+hr{
+    margin: 25px;
+}
+
+.bor{
+    border-left: 5px solid #222 ;
+    padding: 15px;
+}
+
+
+
+
+/* ************************************************ */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.modal:target {
+    display: block;
+    
+}
+
+.modal-content {
+    background-color: #e3e3e3;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.close {
+    color: #ba2626;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a[href="#modal1"] {
+    text-decoration: none;
+}
+
+a[href="#modal2"] {
+    text-decoration: none;
+}
+
+
+
+/* Popup link styles */
+.popup {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    
+}
+
+.popup .img1 {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+    
+}
+
+
+
+
+
+.card1
+{
+    background-image: url(../img/syd-sujuaan-FywWHwkizaQ-unsplash.jpg);
+}
+.card2
+{
+    background-image: url(../img/drew-hays-tGYrlchfObE-unsplash.jpg);
+}
+.card3
+{
+    background-image: url(../img/altumcode-mCj7UinqOYQ-unsplash.jpg);
+}
+.card4
+{
+    background-image: url(../img/dose-juice-ocnsb17U6FE-unsplash.jpg);
+}
+
+.card5
+{
+    background-image: url(../img/akash-chaudhary-fgZCi_aCQNk-unsplash.jpg);
+}
+
+.card6
+{
+    background-image: url(../img/rachel-moenning-zjxYwd4HOu0-unsplash.jpg);
+}
+
+
+
+.card:hover {
+    transform: translate(0, -3px);
+}
+
+.card p {
+    background: rgba(203, 203, 203, 0.5);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    height: 200px;
+    flex-grow: 1; /* Ensures paragraph takes available space */
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    color: #000000;
+}
+
+
+.aera {
+    padding: 20px; /* ปรับขอบซ้าย-ขวาของ <main> */
+    margin: 20px; /* ปรับขอบบน-ล่างของ <main> */
+    background-color: #f0f0f0; /* เพิ่มสีพื้นหลังเพื่อแสดงตัวอย่าง */
+    border-radius: 10px;
+    
+}
+
+
+.img1 {
+    display: block; /* ทำให้รูปเป็น block element */
+    margin: auto; /* ทำให้มี margin อัตโนมัติแนวนอน (ซ้าย-ขวา) */
+    max-width: 100%; /* ควบคุมความกว้างของรูปให้ไม่เกินขอบเขตของพื้นที่ที่มี */
+    height: auto; /* ปรับความสูงของรูปให้สัมพันธ์กับความกว้าง */
+    border-radius: 30px;
+    padding: 25px;
+    height: 35rem;
+   
+}
+
+
+.head{
+    font-size: 20px;
+    color: rgb(0, 173, 181);
+    font-weight: 600;
+}
+
+.head1{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.head3{
+    font-size: 20px;
+    color: #0084ff;
+    font-weight: 600;
+    border-left: 8px solid #0084ff;
+    padding: 5px;
+    
+    
+    
+}
+
+.line{
+    margin: 8px;
+}
+
+.c1{
+    color: #0084ff;
+    margin: 20px;
+}
+
+.para{
+    margin: 30px;
+    font-size: 18px;
+}
+
+
+.order{
+    padding-left: 45px;
+    font-size: 18px;
+}
+
+.ref{
+    padding: 20px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+footer h4 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #678983;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Space between image and text */
+    margin: 0 20px; /* Adjust the margin to your preference */
+}
+
+.article img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10%; /* Rounded corners */
+}
+
+.article p {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+
+
+/* Resposive */
+
+
+@media (max-width: 1040px) {
+    header 
+    {
+        padding: 12px 20px;
+    }
+
+    section 
+    {
+        padding: 100px 20px;
+    }
+
+    .home .media-icons 
+    {
+        right: 15px;
+    }
+
+    header .navigation 
+    {
+        display: none;
+    }
+
+    header .navigation.active
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(1, 1, 1, 0.5);
+    }
+
+
+    header .navigation .navigation-item a
+    {
+        
+        color: #222;
+        font-size: 1rem;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-item a::before
+    {
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-item
+    {
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .menu-btn 
+    {
+        background: url(../img/menuu.png) no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    
+        /* Move the menu button to the right */
+        /* margin-left: auto; */
+    }
+
+    /* .menu-btn.active {
+        z-index: 999;
+        background: url(../img/icons.png) no-repeat;
+        background-size: 25px; /* Adjust the width of the background image *//* 
+        background-position: center;
+        transition: 0.3s ease;
+    }  */
+
+}
+
+
+
+
+
