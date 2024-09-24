@@ -1,0 +1,64 @@
+/*  */
+prompt("What is ur name");
+prompt("What is their name");
+
+var loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore)+1;
+
+/*  */
+
+
+var h = prompt("area2");
+var r = prompt("radious");
+
+var aws = 3.14 * r^2 * h;
+
+console.log(aws);
+
+/*  */
+
+prompt("name");
+prompt("thier name");
+
+var love = Math.random * 100;
+love = Math.floor(love)+1;
+
+if(love > 70){
+    alert("Your Love " + loveScore +"%");
+    
+}
+else{
+    alert("No");
+}
+
+
+/*  */
+
+
+var g = ["A","J","P","Jam","La","Jason"];
+
+var gname = prompt("ur name?");
+
+if(g.includes(gname)){
+    alert("Welcome");
+}
+else{
+    alert("Sry");
+}
+
+/*  */
+
+var out = [];
+var count = 1;
+
+function fizz(){
+    out.push(count);
+    count++;
+
+    console.log(out);
+}
+
+/*  */
+
+
+/*  */

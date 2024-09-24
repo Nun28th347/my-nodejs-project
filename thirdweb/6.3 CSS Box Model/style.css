@@ -1,0 +1,38 @@
+.green{
+    width: 260px;
+    height: 260px;
+    border: 10px solid black;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.green p{
+    margin: 0;
+    padding: 20px;
+    background-color: cadetblue;
+}
+
+.yellow{
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    
+   border-top: 20px solid black;
+    border-bottom: 20px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+
+    box-sizing: border-box;
+    margin: 0 16.2rem;
+}
+
+.red{
+    width: 200px;
+    height: 200px;
+    background-color: indianred;
+    border: 10px solid black;
+    box-sizing: border-box;
+    margin: 0 3.7rem;
+}
+
+
